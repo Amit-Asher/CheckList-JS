@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+
+    <!-- Page Title -->
+    <div class="py-5 text-center">
+        <h2>Checklist - JavaScript Exercise</h2>
+        <p class="lead">Below is an example built with Bootstrap’s form controls.</p>
+    </div>
+
+    <!-- Page content -->
+    <div class="row g-3 margin-bottom-sm main-body">
+
+
+        <!-- left nav- new record inputs -->
+        <div class="col-lg-4 body-inputs">
+            <!-- textbox- Title input -->
+            <div class="row g-3 margin-bottom-sm">
+                <div class="col-sm-12">
+                    <label for="new-checklist-title-input" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="new-checklist-title" placeholder="" value=""
+                        required="">
+                    <div class="invalid-feedback">
+                        Valid title is required.
+                    </div>
+                </div>
+            </div>
+
+            <!-- textarea- Description input -->
+            <div class="row g-3 margin-bottom-sm">
+                <div class="form-group">
+                    <label for="new-checklist-description">Description</label>
+                    <textarea class="form-control" id="new-checklist-description" rows="3"></textarea>
+                </div>
+            </div>
+
+            <!-- submit button -->
+            <div class="row g-3 margin-bottom-sm">
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-primary btn-add" onclick="addNewRecord()">Add +</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- right nav- checklist -->
+        <div class="col-lg-5 body-checklist">
+
+
+            <!-- checklist -->
+            <div class="d-flex gap-5 justify-content-center margin-bottom-sm">
+
+                <div class="list-group mx-0" id="records">
+                </div>
+            </div>
+
+            <!-- buttons -->
+            <div class="row g-3 justify-content-center">
+                <div class="col-sm-3 text-center">
+                    <button type="button" class="btn btn-primary" onclick="markAll()">Mark All</button>
+                </div>
+
+                <div class="col-sm-3 text-center">
+                    <button type="button" class="btn btn-secondary" onclick="unMarkAll()">Unmark</button>
+                </div>
+
+                <div class="col-sm-3 text-center">
+                    <button type="button" class="btn btn-danger" onclick="deleteRecords()">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+<footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2021-2022 Company Name</p>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+</footer>
+
+</html>
