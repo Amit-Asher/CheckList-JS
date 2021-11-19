@@ -1,5 +1,7 @@
 let records = []
 
+// test
+
 function markAll() {
     $.each($(".markable"), (_, checkbox) => {
         checkbox.checked = true;
